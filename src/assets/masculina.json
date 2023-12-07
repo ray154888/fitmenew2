@@ -1,0 +1,75 @@
+{
+    "data": [
+        {
+            "previewImageSrc": "assets/mas3.jpeg",
+            "alt": "Moletom Ziper",
+            "title": "Moletom Ziper",
+             "price":"80,90",
+             "id": 11
+        },
+        {
+            "previewImageSrc": "assets/f2M.jpeg",
+            "alt": "Calça com Ziper",
+            "title": "Calça com Ziper",
+             "price":"90,00",
+             "id": 12
+        },
+        {
+            "previewImageSrc": "assets/f3M.jpeg",
+            "alt": "Calça Moletom",
+            "title": "Calça Moletom",
+             "price":"75,00",
+             "id": 13
+        },
+        {
+            "previewImageSrc": "assets/pl.jpeg",
+            "alt": "Camiseta Polo",
+            "title": "Camiseta Polo",
+             "price":"35,90",
+             "id": 14
+        },
+        {
+            "previewImageSrc": "assets/f5M.jpg",
+            "alt": "Moletom Adidas",
+            "title": "Moletom Adidas",
+             "price":"25,99",
+             "id": 15
+        },
+        {
+            "previewImageSrc": "assets/f6M.jpg",
+            "alt": "Blusa com manga adaptável",
+            "title": "Blusa com manga adaptável",
+             "price":"20,00",
+             "id": 16
+        },
+        {
+            "previewImageSrc": "assets/mas3.jpeg",
+            "alt": "Camisa manga curta folhagem",
+            "title": "Camisa manga curta folhagem",
+             "price":"60,00",
+             "id": 17
+        },
+        {
+            "previewImageSrc": "assets/f8M.JPG",
+            "alt": "Suéter Ralph Gola Vettore",
+            "title": "Suéter Ralph Gola Vettore",
+             "price":"30,00",
+             "id": 18
+        },
+        {
+            "previewImageSrc": "assets/F9M.JPG",
+            "alt": "Calça Sarja ",
+            "title": "Calça Sarja ",
+             "price":"40,00",
+             "id": 19
+
+        },
+        {
+            "previewImageSrc": "assets/f10M.JPG",
+            "alt": "Calça skinny sarja",
+            "title": "Calça skinny sarja",
+             "price":"80,00",
+             "id": 20
+        }
+    ]
+}

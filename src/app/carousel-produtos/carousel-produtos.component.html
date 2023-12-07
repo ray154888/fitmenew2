@@ -1,0 +1,53 @@
+<p-toast></p-toast>
+<p-carousel
+  [value]="images"
+  styleClass="custom-carousel"
+  [numVisible]="3"
+  [numScroll]="1"
+  [circular]="true"
+  [autoplayInterval]="6000"
+  [showIndicators]="false"
+  [responsiveOptions]="responsiveOptions"
+>
+  <ng-template pTemplate="header">
+    <h2 class="textDestaque">{{ titulo }}</h2>
+  </ng-template>
+  <ng-template let-product pTemplate="item">
+    <div class="product-item">
+      <div class="thumb-wrapper">
+        <span (click)="addFavoritos(product)" class="wish-icon"><i class="fa fa-heart"></i></span>
+        <div class="img-box">
+          <img
+            style="height: 50%; width: 50%"
+            [src]="product.previewImageSrc"
+            [alt]="product.title"
+            class="product-image"
+          />
+        </div>
+
+        <div class="thumb-content">
+          <h4>{{ product.title }}</h4>
+          <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <p class="item-price">
+            <s>R$100,00</s> <b>R${{ product.price }}</b>
+          </p>
+          <a
+            [routerLink]="['/Compra']"
+            [queryParams]="{ sessao: paramtros, produtos: product.id }"
+            href="#"
+            class="btn btn-primary"
+            >Comprar</a
+          >
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

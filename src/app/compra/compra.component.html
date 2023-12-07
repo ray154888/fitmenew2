@@ -1,0 +1,126 @@
+<app-header />
+<br />
+<br />
+<div class="container">
+  <p-toast></p-toast>
+  <div class="row-compra">
+    <div class="col-md-6 _boxzoom">
+      <div class="_product-images">
+        <div class="picZoomer">
+          <div
+            class="ecommerce-gallery"
+            data-mdb-zoom-effect="true"
+            data-mdb-auto-height="true"
+          >
+            <div class="row py-3">
+              <div class="col-12 mb-1">
+                <div class="lightbox">
+                  <img
+                    src="{{ images.previewImageSrc }}"
+                    alt="Gallery image 1"
+                    class="ecommerce-gallery-main-img active w-100"
+                    appImageDetails
+                  />
+                </div>
+              </div>
+              <div class="col-3 mt-1">
+                <img
+                  src="{{ images.previewImageSrc }}"
+                  data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/14a.webp"
+                  alt="Gallery image 1"
+                  class="active w-100"
+                  appImageDetails
+                />
+              </div>
+              <div class="col-3 mt-1">
+                <img
+                  src="{{ images.previewImageSrc }}"
+                  data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp"
+                  alt="Gallery image 2"
+                  class="w-100"
+                  appImageDetails
+                />
+              </div>
+              <div class="col-3 mt-1">
+                <img
+                  src="{{ images.previewImageSrc }}"
+                  data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/13a.webp"
+                  alt="Gallery image 3"
+                  class="w-100"
+                  appImageDetails
+                />
+              </div>
+              <div class="col-3 mt-1">
+                <img
+                  src="{{ images.previewImageSrc }}"
+                  data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/15a.webp"
+                  alt="Gallery image 4"
+                  class="w-100"
+                  appImageDetails
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <h2>{{ images.title }}</h2>
+      </div>
+      <div class="line-divider"></div>
+      <div class="row product-value">
+        <h1 class="product-value-item">R${{ images.price }}</h1>
+      </div>
+      <div class="row product-color">
+        <div class="color-product">
+          <span class="ei182_3700_167_6605">Cor: </span>
+          <span class="ei182_3700_167_6606">Marrom, Branco e Preto</span>
+          <div class="color-circles">
+            <button class="color-button brown" (click)="selecionarCor('marrom')"></button>
+            <button class="color-button white" (click)="selecionarCor('branco')"></button>
+            <button class="color-button black" (click)="selecionarCor('preto')"></button>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="row product-color mt-4">
+        <div class="color-product">
+          <span class="ei182_3700_167_6605">Tamanho</span>
+          <div class="size-product">
+            <div class="size-squard">
+              <span>PP</span>
+            </div>
+            <div class="size-squard">
+              <span>P</span>
+            </div>
+            <div class="size-squard">
+              <span>M</span>
+            </div>
+            <div class="size-squard">
+              <span>G</span>
+            </div>
+            <div class="size-squard">
+              <span>GG</span>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <h5>Sobre o Produto:<br></h5>
+        <p>
+          {{ images.alt }}
+        </p>
+      </div>
+
+      <div class="row mt-4">
+        <button class="btnComprar" (click)="AddToCard()" type="button">
+          Adicionar ao Carinho
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer />

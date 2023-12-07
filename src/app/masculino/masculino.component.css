@@ -1,0 +1,12 @@
+/* Add your component-specific or global styles here */
+
+.select-size {
+    /* Apply your custom styles here */
+    width: 150px; /* Set your desired width */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    padding: 5px; /* Adjust padding as needed */
+    font-size: 14px; /* Set the font size */
+    /* Add more styles as needed */
+  }
+  

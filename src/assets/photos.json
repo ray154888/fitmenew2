@@ -1,0 +1,31 @@
+{
+    "data": [
+        {
+            "itemImageSrc": "assets/header11.JPG",
+            "previewImageSrc": "assets/f3.jpeg",
+            "thumbnailImageSrc": "assets/header11.JPG",
+            "alt": "Description for Image 1",
+            "title": "Conjunto de Camiseta Social",
+            "price": "50,90"
+            
+        },
+        {
+            "itemImageSrc": "assets/imagem2.JPG",
+            "previewImageSrc": "assets/f22.jpg",
+            "thumbnailImageSrc": "assets/imagem2.JPG",
+            "alt": "Description for Image 2",
+            "title": "Blusa Feminina com Velcro",
+            "price": "80,90"
+        },
+        {
+            "itemImageSrc": "assets/imagem3.jpg",
+            "previewImageSrc": "assets/f7.jpeg",
+            "thumbnailImageSrc": "assets/imagem3.jpg",
+            "alt": "Description for Image 3",
+            "title": "Macaquinho Verde com Cinto",
+            "price": "80,90"
+        }
+        
+        
+    ]
+}

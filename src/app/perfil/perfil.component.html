@@ -1,0 +1,78 @@
+<div class="wrapper">
+  <p-toast></p-toast>
+  <form [formGroup]="loginForm" (submit)="userLogin()">
+    <p-dialog
+      header="Cadastrar"
+      [(visible)]="visible"
+      [style]="{ width: '20vw' }"
+    >
+      <p>Deseja Cadastrar Pessoa</p>
+      <div style="display: flex; justify-content: space-between">
+        <p-button
+          (onClick)="confirmar(0)"
+          style="margin-right: 12px"
+          icon="pi pi-check"
+          label="Física"
+        ></p-button>
+        <p-button
+          (onClick)="confirmar(1)"
+          icon="pi pi-check"
+          label="Jurídica"
+        ></p-button>
+      </div>
+    </p-dialog>
+    <p-card header="Login" [style]="{ width: '500px' }">
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          pInputText
+          formControlName="email"
+          class="w-100"
+          name="email"
+          placeholder="Digite seu email"
+        />
+        <small
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="block p-error"
+        >
+          <div *ngIf="email.errors?.['required']">Email obrigatório</div>
+          <div *ngIf="email.errors?.['email']">Email deve ser válido</div>
+        </small>
+      </div>
+      <div class="field">
+        <label class="mt-3" for="password">Senha</label>
+        <input
+          type="password"
+          pInputText
+          formControlName="password"
+          class="w-100"
+          name="password"
+          placeholder="Digite sua a senha"
+        />
+        <small
+          *ngIf="password.invalid && (password.dirty || password.touched)"
+          class="block p-error"
+        >
+          <div *ngIf="password.errors?.['required']">Senha obrigatório</div>
+        </small>
+      </div>
+
+      <p-button
+        label="Login"
+        [style]="{ width: '100%', marginTop: '1rem' }"
+        [loading]="loading"
+        (onClick)="userLogin()"
+        [disabled]="loginForm.invalid"
+      ></p-button>
+      <div class="mt-2">
+        Não possui cadastro?
+        <a
+          [style]="{ color: '#ffa500', cursor: 'pointer' }"
+          (click)="mostraDialog()"
+          >Cadastre-se</a
+        >
+      </div>
+    </p-card>
+  </form>
+</div>

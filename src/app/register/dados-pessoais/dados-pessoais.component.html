@@ -1,0 +1,143 @@
+<div class="stepsdemo-content">
+  <p-card>
+    <ng-template pTemplate="title"> Dados Pessoais </ng-template>
+    <ng-template pTemplate="subtitle">
+      Por favor informe os dados abaixo
+    </ng-template>
+    <ng-template pTemplate="content">
+      <form [formGroup]="infoPersonal" (submit)="cadastrardados()">
+        <div class="p-fluid">
+          <div class="field">
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              pInputText
+              formControlName="name"
+              class="w-100"
+              name="name"
+              placeholder="Digite seu nome"
+            />
+            <small
+              *ngIf="
+                personal.name.invalids &&
+                (personal.name.dirty || personal.name.touched)
+              "
+              class="block p-error"
+            >
+              <div *ngIf="personal.name.errors?.['required']">
+                Nome obrigatório
+              </div>
+              <div *ngIf="personal.name.errors?.['pattern']">
+                Insira um nome válido
+              </div>
+            </small>
+          </div>
+          <div class="field">
+            <label for="lastname">Sobrenome</label>
+            <input
+              type="text"
+              pInputText
+              formControlName="lastname"
+              class="w-100"
+              name="lastname"
+              placeholder="Digite seu nome"
+            />
+            <small
+              *ngIf="
+                personal.lastname.invalids &&
+                (personal.lastname.dirty || personal.lastname.touched)
+              "
+              class="block p-error"
+            >
+              <div *ngIf="personal.lastname.errors?.['required']">
+                Sobrenome obrigatório
+              </div>
+              <div *ngIf="personal.lastname.errors?.['pattern']">
+                Insira um Sobrenome válido
+              </div>
+            </small>
+          </div>
+          <div class="field">
+            <div class="p-fluid p-mat">
+              <div class="flex-automatico">
+                <span class="font-bold mb-items">Data Nascimento</span>
+                <p-inputMask
+                  mask="99/99/9999"
+                  formControlName="datanascimento"
+                  placeholder="11/07/1999"
+                  slotChar="dd/mm/yyyy"
+                ></p-inputMask>
+              </div>
+
+              <div class="flex-automatico">
+                <span class="font-bold mb-items">Gênero</span>
+                <select name="" id="" class="select-gender">
+                  <option value="" *ngFor="let option of values">{{option.label}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cpf">CPF</label>
+            <p-inputMask
+              mask="999.999.999-99"
+              formControlName="cpf"
+              placeholder="000.000.000-00"
+            ></p-inputMask>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              pInputText
+              formControlName="email"
+              class="w-100"
+              name="email"
+              placeholder="Digite seu email"
+            />
+            <small
+              *ngIf="
+                personal.email.invalids &&
+                (personal.email.dirty || personal.email.touched)
+              "
+              class="block p-error"
+            >
+              <div *ngIf="personal.email.errors?.['required']">
+                Email obrigatório
+              </div>
+              <div *ngIf="personal.email.errors?.['email']">
+                Email deve ser válido
+              </div>
+            </small>
+          </div>
+          <div class="field">
+            <label class="mt-3" for="password">Senha</label>
+            <input
+              type="password"
+              pInputText
+              formControlName="password"
+              class="w-100"
+              name="personal.password.invalidss && ( personal.password.dirty ||  personal.password.touched)"
+              placeholder="Digite sua a senha"
+            />
+            <small *ngIf="personal.password" class="block p-error">
+              <!-- <div *ngIf="personal.password.errors?.['required']">
+              Senha obrigatório
+            </div> -->
+            </small>
+          </div>
+        </div>
+      </form>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <div class="grid grid-nogutter justify-content-end">
+        <p-button
+          label="Continuar"
+          (onClick)="cadastrardados()"
+          icon="pi pi-angle-right"
+          iconPos="right"
+        ></p-button>
+      </div>
+    </ng-template>
+  </p-card>
+</div>

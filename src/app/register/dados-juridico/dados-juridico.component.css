@@ -1,0 +1,22 @@
+.wrapper {
+  background: #fced69;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.p-mat {
+  display: flex;
+  gap: 1rem !important;
+  flex-direction: row;
+}
+
+.flex-automatico {
+  flex: 1 1 auto !important;
+}
+
+.mb-items {
+  margin-bottom: 0.5rem !important;
+  display: flex;
+}

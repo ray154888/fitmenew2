@@ -1,0 +1,47 @@
+{
+  "cliente": [
+    {
+      "name": "Lia",
+      "lastname": "Andrea",
+      "datanascimento": "29/06/2005",
+      "genero": "",
+      "cpf": "234.724.438-20",
+      "email": "alimoland27@gmail.com",
+      "password": "agoranao",
+      "id": 1
+    },
+    {
+      "name": "dfgedrfgv",
+      "lastname": "fdgvbdfrgv",
+      "datanascimento": "25/09/2005",
+      "genero": "M",
+      "cpf": "534.832.645-23",
+      "email": "alimoland12@gmai.com",
+      "password": "agoranao123.",
+      "id": 2
+    },
+    {
+      "name": "Ali",
+      "lastname": "Molle",
+      "datanascimento": "32/43/2423",
+      "genero": "",
+      "cpf": "432.432.432-43",
+      "email": "alimoland89@gmail.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "cnpj": "92.754.738/0001-62",
+      "name": "LOJAS RENNER S.A.",
+      "lastname": "RENNER",
+      "email": "alimoland67@gmail.com",
+      "password": "123456",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      
+    }
+  ]
+}

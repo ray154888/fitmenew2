@@ -1,0 +1,24 @@
+.p-mat {
+  display: flex;
+  gap: 1rem !important;
+  flex-direction: row;
+}
+
+.flex-automatico {
+  flex: 1 1 auto !important;
+}
+
+.mb-items {
+  margin-bottom: 0.5rem !important;
+  display: flex;
+}
+
+.select-gender {
+ 
+  width: 200px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  padding: 14px; 
+  font-size: 14px; 
+
+}

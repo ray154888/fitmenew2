@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="container" *ngIf="showMesage">
+  <h1 class="no-order-text">NENHUM ITEM NO CARRINHO</h1>
+  <button class="buy-button" routerLink="">APROVEITE E COMPRE AGORA</button>
+</div>
+<div class="cart-itens">
+  <div class="card">
+    <p-table [value]="images" [tableStyle]="{ 'min-width': '60rem' }">
+      <ng-template pTemplate="caption">
+        <div class="flex align-items-center justify-content-between">
+          Produtos
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Produto</th>
+          <th>Imagem</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Ações</th> <!-- Adicionado uma nova coluna para as ações -->
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-image>
+        <tr>
+          <td>{{ image.title }}</td>
+          <td>
+            <img
+              [src]="image.previewImageSrc"
+              [alt]="image.alt"
+              width="100"
+              class="shadow-4"
+            />
+          </td>
+          <td>{{ image.alt }}</td>
+          <td>R${{ image.price }}</td>
+          <td>
+            <button pButton (click)="removerDoCarrinho(image)" style="background: #ff0000; border: none;" label="Remover" icon="pi pi-trash" class="p-button"></button>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="summary">
+        <div class="flex align-items-center justify-content-between" style="display: flex;">
+          Total de itens no carrinho {{ images ? count : 0 }}.
+          <tr>
+            <td colspan="3" class="text-right">Valor Total: </td>
+            <td>R${{ total }}</td>
+          </tr>
+        </div>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
+<app-footer></app-footer>

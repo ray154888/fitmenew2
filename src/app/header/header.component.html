@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Just an image -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo11.JPG" width="60px" height="60px" alt="">
+    </a>
+  </nav>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a routerLink="/Feminino" class="nav-link">Feminino</a>
+      </li>
+      <li class="nav-item active">
+        <a routerLink="/Masculino" class="nav-link">Masculino</a>
+      </li>
+      <li class="nav-item active">
+        <a routerLink="/Equipe" class="nav-link">Equipe</a>
+      </li>
+      <li class="nav-item active">
+        <a routerLink="/Contato" class="nav-link">Contato</a>
+      </li>
+    </ul>
+
+  </div>
+  <form class="form-inline">
+    <div class="search-container">
+      <input class="form-control" type="search" size="15" (input)="search($event)">
+  
+      <button class="btn-lupa" type="submit"><img src="../../assets/lupa.png" width="36" height="36">
+      </button>
+    </div>
+    <div class="results-container">
+      <ul>
+        <li *ngFor="let result of searchResults">
+          
+      <a [routerLink]="['/Compra']">
+           <img width="50px" [src]="result.previewImageSrc" [alt]="result.alt" />
+            <p>{{ result.title }}</p>
+            <p>{{ result.price }}</p>
+          </a>
+          <hr>
+        </li>
+      </ul>
+    </div>
+
+  </form>
+  <ul class="nav justify-content-end">
+    <li class="nav-ite">
+      <a [routerLink]="['/Favoritos']" routerLinkActive="router-link-active" class="nav-li active">
+        <img src="../../assets/hearttoheart.png" width="40" height="40" alt="">
+      </a>
+    </li>
+  </ul>
+  <ul class="nav justify-content-end">
+    <li class="nav-ite">
+      <a [routerLink]="['/Carinho']" routerLinkActive="router-link-active" class="nav-li active">
+        <img src="../../assets/shops.png" width="26" height="21" alt="">
+      </a>
+    </li>
+  </ul>
+  <ul class="nav justify-content-end">
+    <li class="nav-ite">
+      <a [routerLink]="['/Perfil']" routerLinkActive="router-link-active" class="nav-li active">
+        <img src="../../assets/perfil.png" width="30" height="30" alt="">
+      </a>
+    </li>
+  </ul>
+</nav>

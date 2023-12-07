@@ -1,0 +1,102 @@
+<div class="stepsdemo-content">
+  <p-toast></p-toast>
+  <p-card>
+    <ng-template pTemplate="title"> Complemento </ng-template>
+    <ng-template pTemplate="subtitle">
+      Por favor informe os dados abaixo
+    </ng-template>
+    <ng-template pTemplate="content">
+      <div class="p-fluid" [formGroup]="complemento">
+        <div class="field">
+          <label for="cidade">Cidade</label>
+          <input
+            type="text"
+            pInputText
+            formControlName="cidade"
+            class="w-100"
+            name="cidade"
+            placeholder="Digite o nome da Cidade"
+          />
+        </div>
+
+        <div class="field">
+          <div class="p-fluid p-mat">
+            <div class="flex-automatico">
+              <label for="endereco">Endereço</label>
+              <input
+                type="text"
+                pInputText
+                formControlName="endereco"
+                class="w-100"
+                name="endereco"
+                placeholder="Digite seu endereço"
+              />
+            </div>
+
+            <div class="flex-automatico">
+              <label for="numero">Numero</label>
+              <input
+                type="text"
+                pInputText
+                formControlName="numero"
+                class="w-100"
+                name="numero"
+                maxlength="10"
+                placeholder="Digite seu numero da casa"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="bairro">Bairro</label>
+          <input
+            type="text"
+            pInputText
+            formControlName="bairro"
+            class="w-100"
+            name="bairro"
+            placeholder="Digite o nome do bairro"
+          />
+        </div>
+        <div class="field">
+          <div class="p-fluid p-mat">
+            <div class="flex-automatico">
+              <label for="complemento">Complemento</label>
+              <input
+                type="text"
+                pInputText
+                formControlName="complemento"
+                class="w-100"
+                name="complemento"
+                placeholder="Digite o complemento"
+              />
+            </div>
+
+            <div class="flex-automatico">
+              <span class="font-bold mb-items">Celular</span>
+              <p-inputMask mask="(99) 9 9999-9999" placeholder=""></p-inputMask>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <div
+        class="grid grid-nogutter"
+        style="display: flex; justify-content: space-between"
+      >
+        <p-button
+          label="Voltar"
+          (onClick)="paginaAnterior()"
+          icon="pi pi-angle-left"
+        ></p-button>
+        <p-button
+          label="Cadastrar"
+          (onClick)="CadastrarDados()"
+          iconPos="right"
+          styleClass="p-button-success"
+        ></p-button>
+      </div>
+    </ng-template>
+  </p-card>
+</div>

@@ -1,0 +1,94 @@
+<div class="wrapper">
+  <form [formGroup]="Juridico">
+    <p-card [style]="{ width: '500px' }">
+      <ng-template pTemplate="title"> Dados Jurídicos </ng-template>
+      <ng-template pTemplate="subtitle">
+        Por favor informe os dados abaixo
+      </ng-template>
+      <div class="field">
+        <div class="p-fluid p-mat">
+          <div class="flex-automatico">
+            <label for="cnpj">CNPJ</label>
+            <p-inputMask
+              formControlName="cnpj"
+              mask="99.999.999/9999-99"
+              placeholder="000.000.000/0000-00"
+              name="cnpj"
+              (onBlur)="consultarcep()"
+            ></p-inputMask>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <div class="p-fluid p-mat">
+          <div class="flex-automatico">
+            <label for="lastname">Nome Fantasia</label>
+            <input
+              type="text"
+              pInputText
+              class="w-100"
+              formControlName="lastname"
+              name="lastname"
+              placeholder="Digite o Nome Fanstasia"
+            />
+          </div>
+
+          <div class="flex-automatico">
+            <label for="name">Razão Social</label>
+            <input
+              type="text"
+              pInputText
+              class="w-100"
+              formControlName="name"
+              name="name"
+              placeholder="Digite a Razão Social"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          pInputText
+          formControlName="email"
+          class="w-100"
+          name="email"
+          placeholder="Digite seu email"
+        />
+        <small
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="block p-error"
+        >
+          <div *ngIf="email.errors?.['required']">Email obrigatório</div>
+          <div *ngIf="email.errors?.['email']">Email deve ser válido</div>
+        </small>
+      </div>
+      <div class="field">
+        <label class="mt-3" for="password">Senha</label>
+        <input
+          type="password"
+          pInputText
+          formControlName="password"
+          class="w-100"
+          name="password"
+          placeholder="Digite sua a senha"
+        />
+        <small
+          *ngIf="password.invalid && (password.dirty || password.touched)"
+          class="block p-error"
+        >
+          <div *ngIf="password.errors?.['required']">Senha obrigatório</div>
+        </small>
+      </div>
+
+      <p-button
+        label="Cadastrar"
+        [style]="{ width: '100%', marginTop: '1rem', }"
+        [loading]="loading"
+        (onClick)="load()"
+        [disabled]="Juridico.invalid"
+      ></p-button>
+    </p-card>
+  </form>
+</div>

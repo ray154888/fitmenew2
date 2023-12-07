@@ -1,0 +1,17 @@
+{
+  "cliente": [
+    {
+      "name": "Lia",
+      "lastname": "Andrea",
+      "datanascimento": "29/06/2005",
+      "genero": "",
+      "cpf": "234.724.438-20",
+      "email": "alimoland27@gmail.com",
+      "password": "agoranao",
+      "id": 1
+    }
+  ],
+  "cart": [
+    
+  ]
+}

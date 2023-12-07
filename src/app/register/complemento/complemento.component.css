@@ -1,0 +1,14 @@
+.p-mat {
+  display: flex;
+  gap: 1rem !important;
+  flex-direction: row;
+}
+
+.flex-automatico {
+  flex: 1 1 auto !important;
+}
+
+.mb-items {
+  margin-bottom: 0.5rem !important;
+  display: flex;
+}

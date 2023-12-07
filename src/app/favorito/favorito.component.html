@@ -1,0 +1,46 @@
+<app-header></app-header>
+<h1>Meus Favoritos</h1>
+<p>{{ countItems }} adicionado(s) à sua lista</p>
+<div class="container" *ngIf="showMessage">
+  <div class="center-content">
+    <p>Você ainda não possui produtos na sua lista de desejos.</p>
+  </div>
+</div>
+<div class="card" *ngIf="!showMessage">
+  <p-dataView #dv [value]="images" [layout]="layout">
+    <ng-template let-product pTemplate="gridItem">
+      <div class="col-12 sm:col-6 lg:col-12 xl:col-4 p-2">
+        <div class="p-4 border-1 surface-border surface-card border-round">
+          <div class="flex flex-column align-items-center gap-3 py-5">
+            <img
+              style="height: 172px !important; width: 172px !important"
+              class="w-4 shadow-2 border-round"
+              [src]="product.previewImageSrc"
+              [alt]="product.title"
+            />
+            <div class="text-2xl font-bold">{{ product.title }}</div>
+          </div>
+          <div class="flex align-items-center justify-content-between">
+            <span class="text-2xl font-semibold">{{
+              "R$" + product.price
+            }}</span>
+            <button
+              pButton
+              [routerLink]="['/Compra']"
+              [queryParams]="{ sessao: 'feminina', produtos: product.id }"
+              style="
+                background: rgba(255, 191.00000381469727, 0, 1);
+                border: none;
+              "
+              label="Comprar"
+              icon="pi pi-shopping-cart"
+              class="p-button"
+            ></button>
+            <button pButton (click)="removerDosFavoritos(product)" style="background: #ff0000; border: none;" label="Remover" icon="pi pi-trash" class="p-button"></button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-dataView>
+</div>
+<app-footer></app-footer>
