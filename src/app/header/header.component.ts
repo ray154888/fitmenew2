@@ -21,7 +21,6 @@ export class HeaderComponent {
   search(event: any) {
     const query = event.target.value;
     if (query.length >= 2) {
-      console.log(this.jsonData);
       this.searchResults = this.jsonData.filter((item: any) =>
         item.title.toLowerCase().includes(query.toLowerCase())
       );

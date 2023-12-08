@@ -44,13 +44,11 @@ export class CarouselProdutosComponent implements OnInit {
       this.paramtros = 'masculina';
     }
     this.produtos.getImages(this.paramtros).then((images) => {
-      console.log(JSON.stringify(images));
       this.images = images;
     });
   }
 
   addFavoritos(prod: galeriaImages) {
-    console.log(prod);
     let dados = localStorage.getItem('favoritos');
     if (!dados) {
       localStorage.setItem('favoritos', `[${JSON.stringify(prod)}]`);

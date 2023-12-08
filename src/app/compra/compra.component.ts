@@ -48,9 +48,8 @@ export class CompraComponent implements OnInit {
       this.sessao = params['sessao'];
 
       this.produtos.getImagesId(this.sessao, this.produto).then((images) => {
-        
+
         this.images = images;
-        console.log(images)
       });
     });
   }
@@ -88,7 +87,7 @@ export class CompraComponent implements OnInit {
 
   selecionarCor(cor: string) {
     // Implemente a lógica para lidar com a seleção da cor
-    console.log(`Cor selecionada: ${cor}`);
+    //console.log(`Cor selecionada: ${cor}`); -- Retirei o console log, pois não é recomendado deixar habilitado;
   }
-  
+
 }

@@ -15,4 +15,8 @@ export class ComprarService {
   GetAllCart() {
     return this.http.get<galeriaImages[]>('http://localhost:3000/cart');
   }
+
+  RemoveItemCart(id: number){
+    return this.http.delete<galeriaImages>(`http://localhost:3000/cart/${id}`)
+  }
 }

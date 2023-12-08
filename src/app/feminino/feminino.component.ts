@@ -26,7 +26,6 @@ export class FemininoComponent implements OnInit {
 
   ngOnInit() {
     this.produtos.getImages('feminina').then((images) => {
-      console.log(JSON.stringify(images));
       this.images = images;
     });
   }

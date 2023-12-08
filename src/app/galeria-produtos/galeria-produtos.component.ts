@@ -30,7 +30,6 @@ export class GaleriaProdutosComponent implements OnInit {
 
   ngOnInit() {
     this.produtos.getImages('photos').then((images) => {
-      console.log(JSON.stringify(images));
       this.images = images;
     });
   }

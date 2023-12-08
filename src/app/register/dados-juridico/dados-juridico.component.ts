@@ -70,15 +70,12 @@ export class DadosJuridicoComponent implements OnInit {
     this.cep.consultacep(cpnj).subscribe((resp:any) => {
       this.Juridico.controls['name'].setValue(resp.razao_social);
       this.Juridico.controls['lastname'].setValue(resp.estabelecimento.nome_fantasia);
-      console.log(resp);
     });
   }
 
 
   cadastrardados() {
-    console.log(this.Juridico.value);
     this.SignUp.cadastrarfisico(this.Juridico.value).subscribe((resp) => {
-      console.log(resp);
     });
   }
 }

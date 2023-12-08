@@ -49,9 +49,7 @@ export class DadosPessoaisComponent implements OnInit {
   }
 
   cadastrardados() {
-    console.log(this.infoPersonal.value);
     this.SignUp.cadastrarfisico(this.infoPersonal.value).subscribe((resp) => {
-      console.log(resp);
     });
     this.nextpage()
   }
